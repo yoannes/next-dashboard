@@ -1,2 +1,6 @@
 export { default as SideMenu } from "./SideMenu"
 export { default as Icon } from "./Icon"
+export { default as Home } from "./Home"
+export { default as Button } from "./Button"
+export { default as Card } from "./Card"
+export { default as CardHeader } from "./CardHeader"

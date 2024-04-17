@@ -7,9 +7,12 @@ import { usePathname, useRouter } from "next/navigation"
 
 interface Props {}
 
-const menuItems = [
-  { path: "/", name: "Home", icon: "home" as IconType },
-  { path: "/atom", name: "Atom", icon: "atom" as IconType },
+const menuItems: { path: string; name: string; icon: IconType }[] = [
+  { path: "/", name: "Home", icon: "home" },
+  { path: "/atom", name: "Atom", icon: "atom" },
+  { path: "/calendar", name: "Calendar", icon: "calendar" },
+  { path: "/files", name: "Files", icon: "file" },
+  { path: "/awards", name: "Awards", icon: "award" },
 ]
 
 export default function SideMenu(props: Readonly<Props>) {

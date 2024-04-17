@@ -1,0 +1,14 @@
+.root {
+  margin-left: 24px;
+  margin-right: 32px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 0px;
+
+  margin-top: 26px;
+}

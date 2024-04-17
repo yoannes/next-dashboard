@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "npm run prebuild:icons && next dev",
+    "build": "npm run prebuild:icons && next build",
     "start": "next start",
     "lint": "next lint",
     "prebuild:icons": "tsx ./src/scripts/generateIconsList.ts"
@@ -12,6 +12,7 @@
   "dependencies": {
     "@radix-ui/themes": "^3.0.2",
     "next": "14.2.1",
+    "normalize.css": "^8.0.1",
     "react": "^18",
     "react-dom": "^18"
   },
