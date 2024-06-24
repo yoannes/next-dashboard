@@ -1,5 +1,5 @@
-import { Button, Card, CardHeader } from "@/app/_components"
-import { HomeHeader } from "./_components"
+import { Button, Card, CardBody, CardHeader } from "@/app/_components"
+import { HomeHeader, WorkHourAnalysis } from "./_components"
 import styles from "./home.module.css"
 
 export default function Home() {
@@ -13,6 +13,9 @@ export default function Home() {
             <CardHeader title="Work Hour Analysis">
               <Button>Details</Button>
             </CardHeader>
+            <CardBody>
+              <WorkHourAnalysis />
+            </CardBody>
           </Card>
 
           <div className="flex gap-4">

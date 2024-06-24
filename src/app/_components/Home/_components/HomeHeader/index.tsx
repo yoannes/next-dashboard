@@ -2,7 +2,7 @@ import { Button } from "@/app/_components"
 import styles from "./home.module.css"
 
 export default function HomeHeader() {
-  const name = "John Doe"
+  const name = "Bruno"
 
   return (
     <div className={styles.root}>
