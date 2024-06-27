@@ -55,3 +55,29 @@ a {
 .gap-4 {
   gap: 16px;
 }
+
+.t-center {
+  text-align: center;
+}
+
+.red {
+  border: 1px solid red;
+}
+
+/* Typography */
+.x-small {
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.small {
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.084px;
+}

@@ -1,19 +1,23 @@
-import type { Metadata } from "next"
+"use client"
 import { Inter } from "next/font/google"
 import { Theme } from "@radix-ui/themes"
 import { SideMenu } from "./_components"
 import styles from "./layout.module.css"
+import localizedFormat from "dayjs/plugin/localizedFormat"
+import dayjs from "dayjs"
 
 import "normalize.css"
 import "./globals.css"
 import "@radix-ui/themes/styles.css"
 
+dayjs.extend(localizedFormat)
+
 const inter = Inter({ subsets: ["latin"] })
 
-export const metadata: Metadata = {
-  title: "Super dashboard",
-  description: "Your daily dashboard",
-}
+// export const metadata: Metadata = {
+//   title: "Super dashboard",
+//   description: "Your daily dashboard",
+// }
 
 export default function RootLayout({
   children,

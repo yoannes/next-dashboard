@@ -1,0 +1,46 @@
+@import "@radix-ui/colors/black-alpha.css";
+@import "@radix-ui/colors/mauve.css";
+@import "@radix-ui/colors/violet.css";
+
+button {
+  all: unset;
+}
+
+.ButtonGroup {
+  display: inline-flex;
+  background-color: #e2e4e9;
+  border-radius: 4px;
+  border: 1px solid #e2e4e9;
+  cursor: pointer;
+  width: 100%;
+}
+
+.ButtonGroupItem {
+  background-color: white;
+  color: #525866;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1px;
+  padding: 4px 10px;
+  flex-grow: 1;
+}
+.ButtonGroupItem:first-child {
+  margin-left: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.ButtonGroupItem:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.ButtonGroupItem:hover {
+  background-color: #f6f8fa;
+}
+.ButtonGroupItem[data-state="on"] {
+  background-color: #f6f8fa;
+  color: #525866;
+}
+/* .ButtonGroupItem:focus {
+  position: relative;
+} */
