@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react"
-import styles from "./home.module.css"
+import styles from "./index.module.css"
 import { ButtonGroup, Icon } from "@/app/_components"
 import { className } from "@/app/utils"
 

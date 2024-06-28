@@ -3,14 +3,16 @@ import { Inter } from "next/font/google"
 import { Theme } from "@radix-ui/themes"
 import { SideMenu } from "./_components"
 import styles from "./layout.module.css"
-import localizedFormat from "dayjs/plugin/localizedFormat"
 import dayjs from "dayjs"
+import localizedFormat from "dayjs/plugin/localizedFormat"
+import utc from "dayjs/plugin/utc"
 
 import "normalize.css"
 import "./globals.css"
 import "@radix-ui/themes/styles.css"
 
 dayjs.extend(localizedFormat)
+dayjs.extend(utc)
 
 const inter = Inter({ subsets: ["latin"] })
 

@@ -1,11 +1,21 @@
 import { Button, Card, CardBody, CardHeader } from "@/app/_components"
-import { HomeHeader, WorkHourAnalysis } from "./_components"
+import { HomeHeader, TimeTracker, WorkHourAnalysis } from "./_components"
 import styles from "./home.module.css"
 
 export default function Home() {
   return (
     <div className={styles.root}>
       <HomeHeader />
+
+      <Card>
+        <CardHeader title="Time Tracker" hasDivider={false}>
+          <Button prefix="history-line">History</Button>
+        </CardHeader>
+
+        <CardBody>
+          <TimeTracker />
+        </CardBody>
+      </Card>
 
       <div className={styles.grid}>
         <div className="flex column gap-4">
@@ -42,8 +52,10 @@ export default function Home() {
         <div className="flex column gap-4">
           <Card>
             <CardHeader title="Time Tracker" hasDivider={false}>
-              <Button>Details</Button>
+              <Button prefix="history-line">History</Button>
             </CardHeader>
+
+            <CardBody>{/* <TimeTracker /> */}</CardBody>
           </Card>
 
           <Card>
