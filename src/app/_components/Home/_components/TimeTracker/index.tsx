@@ -10,18 +10,21 @@ import { useEffect, useState } from "react"
 const tasks: Task[] = [
   {
     id: "1",
+    name: "Ingate App Design",
     startedAt: dayjs().subtract(3, "hour").unix(),
     endedAt: dayjs().subtract(2, "hour").unix() - 2,
     breaks: [],
   },
   {
     id: "2",
+    name: "Backend API",
     startedAt: dayjs().subtract(2, "hour").unix(),
     endedAt: dayjs().subtract(1, "hour").unix() - 10,
     breaks: [],
   },
   {
     id: "3",
+    name: "Frontend development",
     startedAt: dayjs().subtract(1, "hour").unix(),
     breaks: [],
   },
@@ -64,7 +67,7 @@ export default function TimeTracker() {
 
       <div>
         <div className={className("xx-small", styles.bodyStatus)}>Previous tasks</div>
-        <div>
+        <div className="flex column gap-4">
           <TasksList items={tasks} />
         </div>
       </div>

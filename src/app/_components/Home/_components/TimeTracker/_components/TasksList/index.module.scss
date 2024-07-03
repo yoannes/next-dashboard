@@ -1,2 +1,21 @@
 .root {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.icon {
+  padding: 8.889px;
+  border-radius: 50%;
+  border: 1.111px solid #e2e4e9;
+  background: #fff;
+  color: #667085;
+}
+
+.name {
+  color: #0a0d14;
+}
+
+.dur {
+  color: #525866;
 }

@@ -7,16 +7,6 @@ export default function Home() {
     <div className={styles.root}>
       <HomeHeader />
 
-      <Card>
-        <CardHeader title="Time Tracker" hasDivider={false}>
-          <Button prefix="history-line">History</Button>
-        </CardHeader>
-
-        <CardBody>
-          <TimeTracker />
-        </CardBody>
-      </Card>
-
       <div className={styles.grid}>
         <div className="flex column gap-4">
           <Card>
@@ -55,7 +45,9 @@ export default function Home() {
               <Button prefix="history-line">History</Button>
             </CardHeader>
 
-            <CardBody>{/* <TimeTracker /> */}</CardBody>
+            <CardBody>
+              <TimeTracker />
+            </CardBody>
           </Card>
 
           <Card>
