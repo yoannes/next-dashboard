@@ -38,6 +38,19 @@ export default function TimeTracker() {
   const startedAt = openTask ? dayjs.unix(openTask.startedAt) : null
   const diff = dayjs.unix(startedAt ? now.diff(startedAt, "second") : 0).utc()
 
+  const clickHandler = () => {
+    if (openTask) {
+      openTask.endedAt = dayjs().unix()
+    } else {
+      tasks.push({
+        id: Date.now().toString(),
+        name: "New Task",
+        startedAt: dayjs().unix(),
+        breaks: [],
+      })
+    }
+  }
+
   useEffect(() => {
     const interval = setInterval(() => {
       setNow(dayjs())
@@ -58,7 +71,7 @@ export default function TimeTracker() {
             {diff.format("HH:mm")}
             <span style={{ color: "#868C98" }}>{diff.format(":ss")}</span>
           </div>
-          <div className={className("x-small", styles.btn)}>
+          <div className={className("x-small", styles.btn)} onClick={clickHandler}>
             <Icon type={openTask ? "pause-circle" : "play-fill"} />
             <span>{openTask ? "Stop Time Tracker" : "Start Time Tracker"}</span>
           </div>
@@ -67,7 +80,7 @@ export default function TimeTracker() {
 
       <div>
         <div className={className("xx-small", styles.bodyStatus)}>Previous tasks</div>
-        <div className="flex column gap-4">
+        <div className={className("flex", "column", "gap-4", styles.list)}>
           <TasksList items={tasks} />
         </div>
       </div>

@@ -16,12 +16,13 @@ export default function TasksList({ items }: Props) {
     const startedAt = dayjs.unix(item.startedAt)
     const endedAt = item.endedAt ? dayjs.unix(item.endedAt) : now
     const diff = dayjs.unix(endedAt.diff(startedAt, "second")).utc()
+    const icon = item.endedAt ? "stop-circle" : "pause-circle"
 
     return (
       <div key={i} className={styles.root}>
         <div>
           <div className={styles.icon}>
-            <Icon type="pause-circle" size={24} />
+            <Icon type={icon} size={24} />
           </div>
         </div>
         <div>
